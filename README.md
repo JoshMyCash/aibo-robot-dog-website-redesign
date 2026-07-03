@@ -13,13 +13,14 @@ npm run dev
 
 1. Push this project to the `main` branch on GitHub.
 2. In the repository, go to **Settings → Pages**.
-3. Under **Build and deployment**, set **Source** to **Deploy from a branch**.
-4. Set **Branch** to `gh-pages` and folder to `/ (root)`, then save.
-5. Push to `main` (or re-run the workflow from the **Actions** tab). The workflow builds the site and publishes the `dist` folder to the `gh-pages` branch.
+3. Under **Build and deployment**, set **Source** to **GitHub Actions** (not "Deploy from a branch").
+4. Push to `main`, or open the **Actions** tab and re-run **Deploy to GitHub Pages**.
 
 The site will be published at:
 
 `https://<your-username>.github.io/<repository-name>/`
+
+> **Blank page?** That usually means Pages is still serving the `main` branch source files instead of the built site. Switch the Pages source to **GitHub Actions** and re-run the deploy workflow.
 
 The build uses the correct base path automatically from `GITHUB_REPOSITORY`, so asset URLs work on project pages.
 
